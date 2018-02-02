@@ -14,8 +14,8 @@ namespace _0_main
         {
            Console.WriteLine("Launching main");
         
-           Intro i = new Intro(args);
-           leapyear l = new leapyear();
+          // Intro i = new Intro(args);
+           leaptheyear l = new leaptheyear();
            l.run();
            //test(args);
           
