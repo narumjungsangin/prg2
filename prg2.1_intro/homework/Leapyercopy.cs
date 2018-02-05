@@ -25,7 +25,28 @@ namespace prg2._1_intro
                             cout++;
                             }
                     } 
-                    else Console.WriteLine("It is NOT leap year");                
+                    else 
+                    {
+                        Console.WriteLine("It is NOT leap year");  
+                        int cyear = year;
+                        for(int x = 0; x < 4; x++)
+                            {
+                                cyear ++;
+                                if(cyear % 4 == 0 || cyear % 400 == 0)
+                                    break;
+                            }
+                            Console.WriteLine("The next Leap year is" + cyear);
+                            Console.WriteLine("The next four leap year is...");
+                            int nleap = cyear;
+                            int cout = 0;
+                            while(cout != 4)
+                             {    
+                                nleap +=4;
+                                Console.WriteLine(nleap);
+                                cout++;
+                             }
+
+                    }             
             }
             else 
             {
@@ -41,7 +62,28 @@ namespace prg2._1_intro
                     }
             }
          }         
-            if(year % 4 != 0) Console.WriteLine("It is NOT leap year");           
+            if(year % 4 != 0) 
+            {
+                Console.WriteLine("It is NOT leap year");   
+                int cyear = year;
+                        for(int x = 0; x < 4; x++)
+                            {
+                                cyear ++;
+                                if(cyear % 4 == 0 || cyear % 400 == 0)
+                                    break;
+                                
+                            }
+                Console.WriteLine("The next Leap year is" + cyear);
+                Console.WriteLine("The next four leap year is...");
+                int nleap = cyear;
+                int cout = 0;
+                while(cout != 4)
+                 {    
+                     nleap +=4;
+                     Console.WriteLine(nleap);
+                     cout++;
+                 }
+            }        
     }
 }
 }
