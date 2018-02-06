@@ -14,12 +14,17 @@ namespace _0_main
         {
            Console.WriteLine("Launching main");
         
+         CoffeeMaker c = new CoffeeMaker();
+    //     c.AddGrains(5);
+         
           // Intro i = new Intro(args);
-           leaptheyear l = new leaptheyear();
+           
+         Leapyearcopy l = new Leapyearcopy();
            l.run();
-           //test(args);
-          
+        
+           test(args);
            Console.ReadKey();
+         
            /*
            To add a project, first add a new folder naming it the [projectname]
            then type 

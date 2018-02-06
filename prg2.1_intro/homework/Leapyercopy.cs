@@ -6,7 +6,7 @@ namespace prg2._1_intro
     {
         public void run()
         {
-            Console.WriteLine("Print out year if u want");
+            Console.WriteLine("Print out year if youu want");
             int year = Convert.ToInt32(Console.ReadLine());
             if(year % 4 == 0 )
             {
@@ -15,10 +15,10 @@ namespace prg2._1_intro
                     if(year % 400 == 0)
                     {
                         Console.WriteLine("It is leap year");
-                        Console.WriteLine("The next four leap year is...");
+                        Console.WriteLine("The next 20 leap year is...");
                         int nleap = year;
                         int cout = 0;
-                        while(cout != 4)
+                        while(cout != 20)
                             {    
                             nleap +=4;
                             Console.WriteLine(nleap);
@@ -36,10 +36,10 @@ namespace prg2._1_intro
                                     break;
                             }
                             Console.WriteLine("The next Leap year is" + cyear);
-                            Console.WriteLine("The next four leap year is...");
+                            Console.WriteLine("The next twenith leap year is...");
                             int nleap = cyear;
                             int cout = 0;
-                            while(cout != 4)
+                            while(cout != 20)
                              {    
                                 nleap +=4;
                                 Console.WriteLine(nleap);
@@ -54,7 +54,7 @@ namespace prg2._1_intro
                 Console.WriteLine("The next four leap year is...");
                 int nleap = year;
                 int cout = 0;
-                    while(cout != 4)
+                    while(cout != 20)
                     { 
                         nleap +=4;
                         Console.WriteLine(nleap);
@@ -74,10 +74,10 @@ namespace prg2._1_intro
                                 
                             }
                 Console.WriteLine("The next Leap year is" + cyear);
-                Console.WriteLine("The next four leap year is...");
+                Console.WriteLine("The next 20 leap year is...");
                 int nleap = cyear;
                 int cout = 0;
-                while(cout != 4)
+                while(cout != 20)
                  {    
                      nleap +=4;
                      Console.WriteLine(nleap);
