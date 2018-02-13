@@ -14,13 +14,18 @@ namespace _0_main
         {
            Console.WriteLine("Launching main");
         
-         CoffeeMaker c = new CoffeeMaker();
-    //     c.AddGrains(5);
-         
-          // Intro i = new Intro(args);
-           
-         Leapyearcopy l = new Leapyearcopy();
-           l.run();
+        // CoffeeMaker c = new CoffeeMaker();
+        // double coffeegrains =c.GetMaxGrains();
+        Clock clk = new Clock(4,23,14);
+       
+       for(int i = 0; i < 5; i++)
+       {
+           clk.tick();
+       }
+
+        // Intro i = new Intro(args);  
+        //Leapyearcopy l = new Leapyearcopy();
+        //  l.run();
         
            test(args);
            Console.ReadKey();

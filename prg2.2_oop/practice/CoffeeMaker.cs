@@ -27,13 +27,13 @@ namespace prg2._2_oop
         }
         public void InsertFilter()
         {
-            if(filterin == true)
+            if(filterin)
             {
                 throw new Exception ("Filter already inn");
             }
             else
             {
-                filterin = ture;
+                filterin = true;
             }
         }
 
