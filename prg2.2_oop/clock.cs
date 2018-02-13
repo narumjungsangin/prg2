@@ -27,14 +27,30 @@ namespace prg2._2_oop
             }
             return(hour);
         }
-        public int GetDay (int hour)
+      
+
+        static void tick(int count)
         {
-            if(hour > 24)
+            int tick = 0;
+            Clock CLK = new Clock();
+
+            min = 0;
+
+            for(int i = 0; i < count; i++)
             {
-                day = hour/60;
-                hour %= 60;
+                tick++;
+                if(tick == 60) 
+                {
+                CLK.GetMin(tick);
+                }  
+                if(min == 60 )
+                {
+                    CLK.GetHour(tick);
+                }
+
             }
-            return(day);
+
+
         }
 
 
