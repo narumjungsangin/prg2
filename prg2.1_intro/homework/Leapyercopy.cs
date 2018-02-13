@@ -32,10 +32,10 @@ namespace prg2._1_intro
                         for(int x = 0; x < 4; x++)
                             {
                                 cyear ++;
-                                if(cyear % 4 == 0 || cyear % 400 == 0)
+                                if(cyear % 4 == 0 && cyear == 400 &&  cyear % 100 != 0)
                                     break;
                             }
-                            Console.WriteLine("The next Leap year is" + cyear);
+                            Console.WriteLine("The next Leap year is: " + cyear);
                             Console.WriteLine("The next twenith leap year is...");
                             int nleap = cyear;
                             int cout = 0;
@@ -69,7 +69,7 @@ namespace prg2._1_intro
                         for(int x = 0; x < 4; x++)
                             {
                                 cyear ++;
-                                if(cyear % 4 == 0 || cyear % 400 == 0)
+                                if(cyear % 4 == 0 && cyear % 100 != 0 &&  cyear % 400 == 0)
                                     break;
                                 
                             }
