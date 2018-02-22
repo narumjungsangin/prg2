@@ -23,10 +23,9 @@ namespace prg2._2_oop
 
             public Clock(int hours, int mins, int secs)
             {
-                hour = 0;
+                hours = 0;
                 mins = 0;
-                sec = 0;
-
+                secs = 0;
             }
 
           public void displaytime()

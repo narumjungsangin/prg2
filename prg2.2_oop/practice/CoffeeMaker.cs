@@ -1,81 +1,36 @@
 using System;
+using System.Collections.Generic;
 namespace prg2._2_oop
 {
-    public class CoffeeMaker
+    public class CoffeeMaker : ConsumableMaker
     {
-        //methood, constructor
-        double water_amount;
-        double  MAX_WATER_AMOUNT;
-        double coffee_amount;
-        double  MAX_COFEE_AMOUNT;
-        double grain_amount;
-        double  MAX_GRAIN_AMOUNT;
-        bool on_off;
-        //hotplate
-        bool filterin;
-        
-       
         
         public CoffeeMaker()
         {
-             MAX_COFEE_AMOUNT = 12;
-        on_off = false;
-        filterin = false;
-            water_amount = 0;
-//                  throw new Exception("NONONONo");
+            Ingredients = new Dictionary<System.Type,Consumable>();
+            MaxIngredients = new Dictionary<System.Type,double>();
+            Ingredients[typeof(Water)]= new Water();
+            Ingredients[typeof (Coffee)]=new Coffee();
+            Ingredients[typeof(Grain)]= new Grains();
 
+
+        }
+        public void AddWater(double AmountOfWater)
+        {
+            Ingredients[typeof(Water)].quanitity += AmountOfWater;
+
+        }
+        public void AddGrains(double AmountOfGrains)
+        {
+            
         }
         public void InsertFilter()
         {
-            if(filterin)
-            {
-                throw new Exception ("Filter already inn");
-            }
-            else
-            {
-                filterin = true;
-            }
+
         }
-
-
-        public void Addwater(double wateramountAdd)
+        public override Consumable Make()
         {
-            if(water_amount + wateramountAdd > MAX_WATER_AMOUNT)
-            {
-                throw new Exception("TOO MUCH");
-            }
-            else
-            {
-                water_amount += wateramountAdd;
-            }
-            
-
+            throw new NotImplementedException();
         }
-
-        public void AddGrains(double scoops_of_grains)
-        {
-            if(grain_amount + scoops_of_grains > MAX_GRAIN_AMOUNT)
-            {
-                throw new Exception("put some of that back");
-            }
-            else
-            {
-                grain_amount = grain_amount + scoops_of_grains;
-            }
-
-        }
-
-        public double GetMaxGrains()
-        {
-            return MAX_GRAIN_AMOUNT;
-        }
-
-        public void makecoffee()
-        {
-
-
-        }
-
     }
-
 }
