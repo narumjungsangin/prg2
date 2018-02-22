@@ -11,21 +11,23 @@ namespace prg2._2_oop
             MaxIngredients = new Dictionary<System.Type,double>();
             Ingredients[typeof(Water)]= new Water();
             Ingredients[typeof (Coffee)]=new Coffee();
-            Ingredients[typeof(Grain)]= new Grains();
+            Ingredients[typeof(Grains)]= new Grains();
+            Ingredients[typeof(PaperFilter)] = new PaperFilter();
 
 
         }
         public void AddWater(double AmountOfWater)
         {
-            Ingredients[typeof(Water)].quanitity += AmountOfWater;
+            Ingredients[typeof(Water)].quantity += AmountOfWater;
 
         }
         public void AddGrains(double AmountOfGrains)
         {
-            
+            Ingredients[typeof(Grains)].quantity += AmountOfGrains;
         }
         public void InsertFilter()
         {
+            Ingredients[typeof(PaperFilter)].quantity += 1.0;
 
         }
         public override Consumable Make()
