@@ -5,6 +5,6 @@ namespace prg2._2_oop
 
     public class Consumable
     {
-        public double quantity;
+        public double Quantity;
     }
 }

@@ -2,9 +2,9 @@ using System;
 
 namespace prg2._2_oop
 {
-    public  class Water :Consumable
+    public  class Ink :Consumable
     {
-           public Water()
+           public Ink()
         {
             Quantity = 0;
         }
