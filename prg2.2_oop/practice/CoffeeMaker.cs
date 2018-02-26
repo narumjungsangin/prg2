@@ -9,63 +9,67 @@ namespace prg2._2_oop
         {
             Ingredients = new Dictionary<System.Type,Consumable>();
             MaxIngredients = new Dictionary<System.Type,double>();
+            
             Ingredients[typeof(Water)]= new Water();
-            Ingredients[typeof (Coffee)]=new Coffee();
             Ingredients[typeof(Grains)]= new Grains();
-            Ingredients[typeof(PaperFilter)] = new PaperFilter();
+            Ingredients[typeof(Coffee)]= new Coffee();
+            Ingredients[typeof(PaperFilter)]= new PaperFilter();
+
             MaxIngredients[typeof(Water)] = 12.0;
-            MaxIngredients[typeof(Grains)] = 6.0;
+            MaxIngredients[typeof(Grains)] = 1.0;
             MaxIngredients[typeof(Coffee)] = 12.0;
             MaxIngredients[typeof(PaperFilter)] = 2.0;
+
+
+
         }
         public void AddWater(double AmountOfWater)
         {
             if(Ingredients[typeof(Water)].Quantity + AmountOfWater > MaxIngredients[typeof(Water)])
             {
-            Ingredients[typeof(Water)].Quantity += AmountOfWater;
+                throw new Exception("Too much water!!!");         
             }
             else
             {
-                throw new Exception("Too Much Water!");
+                Ingredients[typeof(Water)].Quantity += AmountOfWater;
             }
-
         }
+
         public void AddGrains(double AmountOfGrains)
         {
-
-              if(Ingredients[typeof(Grains)].Quantity + AmountOfGrains > MaxIngredients[typeof(Grains)])
+            if(Ingredients[typeof(Grains)].Quantity + AmountOfGrains > MaxIngredients[typeof(Grains)])
             {
-            Ingredients[typeof(Grains)].Quantity += AmountOfGrains;
+                throw new Exception("Too much grains!!!");         
             }
             else
             {
-                throw new Exception("Too Much Grains!");
+                Ingredients[typeof(Grains)].Quantity += AmountOfGrains;
             }
-
-            Ingredients[typeof(Grains)].Quantity += AmountOfGrains;
         }
         public void InsertFilter()
         {
-            Ingredients[typeof(PaperFilter)].Quantity += 1.0;
-
+            if(Ingredients[typeof(PaperFilter)].Quantity + 1 > MaxIngredients[typeof(PaperFilter)])
+            {
+                throw new Exception("Too many filters!!!");         
+            }
+            else
+            {
+                Ingredients[typeof(PaperFilter)].Quantity += 1.0;
+            }
         }
         public override Consumable Make()
         {
-            
-            {
-                Ingredients[typeof(Coffee)] = new Coffee();
-                Ingredients[typeof(Coffee)].Quantity = Ingredients[typeof(Water)].Quantity;
-                Ingredients[typeof(Coffee)].Quantity = 0;
+            Ingredients[typeof(Coffee)] = new Coffee((Water)Ingredients[typeof(Water)],(Grains)Ingredients[typeof(Grains)], (PaperFilter)Ingredients[typeof(PaperFilter)]);
 
-                return Ingredients
-            }
+
+            Ingredients[typeof(Coffee)].Quantity = Ingredients[typeof(Water)].Quantity;
+            Ingredients[typeof(Water)].Quantity = 0;
+           
+            return Ingredients[typeof(Coffee)];
         }
-
         public void Clean()
-            {
+        {
 
-
-            }
-        
+        }
     }
 }

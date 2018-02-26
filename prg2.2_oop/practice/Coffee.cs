@@ -1,26 +1,23 @@
 using System;
-using System.Collections.Generic;
+
 namespace prg2._2_oop
 {
-
     public class Coffee : Consumable
     {
-        public int Caffine;
+        public double Caffiene;
+
         public string RoastLevel;
+
         public Coffee()
         {
-        Quantity = 0;
-        Caffine = 0;
-        RoastLevel = "Non Exist";
+            Quantity=0;
+            Caffiene = 0;
+            RoastLevel="Non existant";
         }
-
-        public Coffee(Water w, Grains g, PaperFilter pf)
+        public Coffee(Water w,Grains g ,PaperFilter pf)
         {
             this.RoastLevel = g.RoastLevel;
-            w.Quantity;
-            g.Quantity;
-            this.Caffine = w.Quantity/g.Quantity;
-
+            this.Caffiene = w.Quantity/g.Quantity;
         }
     }
 }

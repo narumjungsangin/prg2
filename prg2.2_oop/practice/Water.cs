@@ -2,11 +2,11 @@ using System;
 
 namespace prg2._2_oop
 {
-    public  class Water :Consumable
+    public class Water : Consumable
     {
-           public Water()
+        public Water()
         {
-            Quantity = 0;
+            Quantity=0;
         }
     }
 }
