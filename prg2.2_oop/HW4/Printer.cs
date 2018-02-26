@@ -13,10 +13,12 @@ namespace prg2._2_oop
             Ingredients[typeof (Paper)]=new Paper();
             Ingredients[typeof(Scanner)]= new Scanner();
             Ingredients[typeof(Stapler)] = new Stapler();
+            Ingredients[typeof(Card)] =  new Card();
             MaxIngredients[typeof(Paper)] = 30;
             MaxIngredients[typeof(Ink)] = 5;
             MaxIngredients[typeof(Scanner)] = 1;
             MaxIngredients[typeof(Stapler)] = 100;
+            MaxIngredients[typeof(Card)] = 1;
         }
         public void AddInk(double AmountOfInk)
         {
@@ -54,6 +56,18 @@ namespace prg2._2_oop
             }
         }
 
+         public void InsertCard(double AmountOfCards)
+        {
+           if(Ingredients[typeof(Card)].Quantity + AmountOfCards > MaxIngredients[typeof(Card)])
+            {
+            Ingredients[typeof(Card)].Quantity += AmountOfCards;
+            }
+            else
+            {
+                throw new Exception("Only one card at a time!");
+            }
+        }
+
          public void AddStapler(double AmountOfStapler)
         {
            if(Ingredients[typeof(Stapler)].Quantity + AmountOfStapler > MaxIngredients[typeof(Stapler)])
@@ -68,7 +82,13 @@ namespace prg2._2_oop
 
         public override Consumable Make()
         {
-            throw new NotImplementedException();
+             Ingredients[typeof(Copy)] = new Copy((Ink)Ingredients[typeof(Ink)],(Paper)Ingredients[typeof(Paper)], (Scanner)Ingredients[typeof(Scanner)],(Stapler)Ingredients[typeof(Stapler)], (Card)Ingredients[typeof(Card)]);
+
+
+            Ingredients[typeof(Copy)].Quantity = Ingredients[typeof(Water)].Quantity;
+            Ingredients[typeof(Ink)].Quantity = 0;
+           
+            return Ingredients[typeof(Copy)];
         }
 
         /*
