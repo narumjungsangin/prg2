@@ -14,11 +14,13 @@ namespace prg2._2_oop
             Ingredients[typeof(Scanner)]= new Scanner();
             Ingredients[typeof(Stapler)] = new Stapler();
             Ingredients[typeof(Card)] =  new Card();
+            Ingredients[typeof(ColoredInk)] = new ColoredInk();
             MaxIngredients[typeof(Paper)] = 30;
             MaxIngredients[typeof(Ink)] = 5;
             MaxIngredients[typeof(Scanner)] = 1;
             MaxIngredients[typeof(Stapler)] = 100;
             MaxIngredients[typeof(Card)] = 1;
+            MaxIngredients[typeof(ColoredInk)] = 5;
         }
         public void AddInk(double AmountOfInk)
         {
@@ -80,9 +82,22 @@ namespace prg2._2_oop
             }
         }
 
+          public void AddColoredInk(double AmountOfColoredInk)
+        {
+            if(Ingredients[typeof(ColoredInk)].Quantity + AmountOfColoredInk > MaxIngredients[typeof(ColoredInk)])
+            {
+            Ingredients[typeof(Ink)].Quantity += AmountOfColoredInk;
+            }
+            else
+            {
+                throw new Exception("Too Much Ink!");
+            }
+
+        }
+
         public override Consumable Make()
         {
-             Ingredients[typeof(Copy)] = new Copy((Ink)Ingredients[typeof(Ink)],(Paper)Ingredients[typeof(Paper)], (Scanner)Ingredients[typeof(Scanner)],(Stapler)Ingredients[typeof(Stapler)], (Card)Ingredients[typeof(Card)]);
+             Ingredients[typeof(Copy)] = new Copy((Ink)Ingredients[typeof(Ink)],(Paper)Ingredients[typeof(Paper)], (Scanner)Ingredients[typeof(Scanner)],(Stapler)Ingredients[typeof(Stapler)], (Card)Ingredients[typeof(Card)], (ColoredInk)Ingredients[typeof(ColoredInk)]);
 
 
             Ingredients[typeof(Copy)].Quantity = Ingredients[typeof(Water)].Quantity;

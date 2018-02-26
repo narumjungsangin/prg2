@@ -14,7 +14,7 @@ namespace prg2._2_oop
             Files = 0;
             Copylayer="Non existant";
         }
-        public Copy(Ink i,Paper p ,Scanner sc, Stapler st, Card c)
+        public Copy(Ink i,Paper p ,Scanner sc, Stapler st, Card c, ColoredInk ci)
         {
             this.Copylayer = p.Copylayer;
         }
