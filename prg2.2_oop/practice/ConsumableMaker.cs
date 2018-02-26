@@ -9,7 +9,6 @@ namespace prg2._2_oop
 
 
 
-        public abstract Consumable Make();
-
+        public abstract Consumable Make { get; }
     }
 }

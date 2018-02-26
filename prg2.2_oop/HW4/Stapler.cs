@@ -3,11 +3,10 @@ using System.Collections.Generic;
 namespace prg2._2_oop
 {
 
-    public class Grains : Consumable
+    public class Stapler : Consumable
     {
 
-        public string RoastLevel;
-           public Grains()
+           public Stapler()
         {
             Quantity = 0;
         }

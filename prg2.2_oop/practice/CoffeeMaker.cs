@@ -26,22 +26,46 @@ namespace prg2._2_oop
             }
             else
             {
-                throw new Exception("Too Much Water!")
+                throw new Exception("Too Much Water!");
             }
 
         }
         public void AddGrains(double AmountOfGrains)
         {
-            Ingredients[typeof(Grains)].quantity += AmountOfGrains;
+
+              if(Ingredients[typeof(Grains)].Quantity + AmountOfGrains > MaxIngredients[typeof(Grains)])
+            {
+            Ingredients[typeof(Grains)].Quantity += AmountOfGrains;
+            }
+            else
+            {
+                throw new Exception("Too Much Grains!");
+            }
+
+            Ingredients[typeof(Grains)].Quantity += AmountOfGrains;
         }
         public void InsertFilter()
         {
-            Ingredients[typeof(PaperFilter)].quantity += 1.0;
+            Ingredients[typeof(PaperFilter)].Quantity += 1.0;
 
         }
         public override Consumable Make()
         {
-            //throw new NotImplementedException();
+            
+            {
+                Ingredients[typeof(Coffee)] = new Coffee();
+                Ingredients[typeof(Coffee)].Quantity = Ingredients[typeof(Water)].Quantity;
+                Ingredients[typeof(Coffee)].Quantity = 0;
+
+                return Ingredients
+            }
         }
+
+        public void Clean()
+            {
+
+
+            }
+        
     }
 }
