@@ -11,12 +11,10 @@ namespace prg2._2_oop
             MaxIngredients = new Dictionary<System.Type,double>();
             Ingredients[typeof(Ink)]= new Ink();
             Ingredients[typeof (Paper)]=new Paper();
-         //     Ingredients[typeof(Grains)]= new Grains();
-         //     Ingredients[typeof(PaperFilter)] = new PaperFilter();
-            MaxIngredients[typeof(Paper)] = 12.0;
-            MaxIngredients[typeof(Ink)] = 6.0;
-         //     MaxIngredients[typeof(Coffee)] = 12.0;
-         //     MaxIngredients[typeof(PaperFilter)] = 2.0;
+             Ingredients[typeof(Scanner)]= new Scanner();
+            MaxIngredients[typeof(Paper)] = 30;
+            MaxIngredients[typeof(Ink)] = 5;
+            MaxIngredients[typeof(Scanner)] = 1;
         }
         public void AddInk(double AmountOfInk)
         {
@@ -39,6 +37,18 @@ namespace prg2._2_oop
             else
             {
                 throw new Exception("Too Much Paper!");
+            }
+        }
+
+         public void InsertScanner(double AmountOfScanner)
+        {
+           if(Ingredients[typeof(Scanner)].Quantity + AmountOfScanner > MaxIngredients[typeof(Scanner)])
+            {
+            Ingredients[typeof(Scanner)].Quantity += AmountOfScanner;
+            }
+            else
+            {
+                throw new Exception("Too much inserted to Scan!");
             }
         }
 

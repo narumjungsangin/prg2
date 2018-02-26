@@ -2,9 +2,9 @@ using System;
 
 namespace prg2._2_oop
 {
-    public  class Paper :Consumable
+    public  class Scanner :Consumable
     {
-           public Paper()
+           public Scanner()
         {
             Quantity = 0;
         }

@@ -7,7 +7,7 @@ namespace prg2._2_oop
     {
            public Grains()
         {
-            quantity = 0;
+            Quantity = 0;
         }
     }
 }
