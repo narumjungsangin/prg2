@@ -15,14 +15,15 @@ namespace _0_main
            Console.WriteLine("Launching main");
         
        
-        Clock clk = new Clock(4,23,14);
+        /*Clock clk = new Clock(4,23,14);
        
         for(int i = 0; i < 5; i++)
          {
            clk.tick();
          }
+        */
 
-
+         int x =  QuickMaths.add(5,6);
        
 
 
