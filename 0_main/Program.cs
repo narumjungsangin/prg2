@@ -13,37 +13,48 @@ namespace _0_main
         static void Main(string[] args)
         {
            Console.WriteLine("Launching main");
-        
-       
         /*Clock clk = new Clock(4,23,14);
-       
         for(int i = 0; i < 5; i++)
          {
            clk.tick();
          }
-        */
+         int x =  QuickMaths.add(5,6); */
 
-         int x =  QuickMaths.add(5,6);
-       
+         NodeTest();
+         Console.ReadKey();
+        }
+         static void NodeTest()
+         {
+            Console.WriteLine("I'm testing node");
+            string done = "";
+            Node<int> linkedList = new Node<int>(0);
+            Node<int> root = linkedList;
+            while(done != "y")
+            {
+                Console.WriteLine("Insert an integer for Linked List");
+                int value = Convert.ToInt32(Console.ReadLine());
+                linkedList.next = new Node<int>(value);
+                linkedList = linkedList.next;
+                Console.WriteLine("Are you done adding y/n?");
+                done = Console.ReadLine().ToLower();
+            }
 
-
+          linkedList.Print();
+          linkedList.PrintAll();
+          
+         }
         // Intro i = new Intro(args);  
         //Leapyearcopy l = new Leapyearcopy();
         //  l.run();
-        
         //   test(args);
         //   Console.ReadKey();
-         
            /*
            To add a project, first add a new folder naming it the [projectname]
            then type 
            dotnet new classlib -o [projectname]
            then cd to 0_main and type
            dotnet add reference ../[projectname]/[projectname].csproj
-
            */
-        
-        }
         static void test(string [] args)
         {
               Intro i = new Intro(args);
@@ -52,6 +63,6 @@ namespace _0_main
               Functional_Programming f = new Functional_Programming(args);
               Database_Design dd = new Database_Design(args);
         }
-
     }
+}
 
