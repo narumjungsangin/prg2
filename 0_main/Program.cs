@@ -20,12 +20,12 @@ namespace _0_main
          }
          int x =  QuickMaths.add(5,6); */
 
-         NodeTest();
-         Console.ReadKey();
+        NodeTest();
+         //Console.ReadKey();
         }
          static void NodeTest()
          {
-            Console.WriteLine("I'm testing node");
+      /*      Console.WriteLine("I'm testing node");
             string done = "";
             Node<int> linkedList = new Node<int>(0);
             Node<int> root = linkedList;
@@ -38,23 +38,61 @@ namespace _0_main
                 Console.WriteLine("Are you done adding y/n?");
                 done = Console.ReadLine().ToLower();
             }
+            */
 
-          linkedList.Print();
-          linkedList.PrintAll();
+                Node<int> List = new Node<int>(0);
+                //List = List.next; 
+                List.next = new Node<int>(4,List.root);
+                List++;
+                List.next = new Node<int>(1,List.root);
+                 List++;
+                List.next = new Node<int>(2,List.root);
+                 List++;
+                List.next = new Node<int>(3,List.root);
+                 List++;
+                List.next = new Node<int>(7,List.root);
+                List = List.root;
+                Swapper<int>.Swap(List.next.next, List.next.next.next);
+
+            /*
+                Node<double> n0 = new Node<double>(0.0);
+                n0.next = new Node<double>(1.0);
+
+                Node<double> www = n0[0];
+                n0[0].Print();
+
+                */
+
+               /* if(n0 == n1)
+                {
+                    Console.WriteLine("they are equal");
+
+                }
+                else
+                {
+                    Console.WriteLine("they are NOT equal");
+
+                }
+                */
+   //       linkedList.Print();
+   //       linkedList.PrintAll();
           
          }
+
+      
+
         // Intro i = new Intro(args);  
         //Leapyearcopy l = new Leapyearcopy();
         //  l.run();
         //   test(args);
         //   Console.ReadKey();
-           /*
-           To add a project, first add a new folder naming it the [projectname]
-           then type 
-           dotnet new classlib -o [projectname]
-           then cd to 0_main and type
-           dotnet add reference ../[projectname]/[projectname].csproj
-           */
+        /*
+        To add a project, first add a new folder naming it the [projectname]
+        then type 
+        dotnet new classlib -o [projectname]
+        then cd to 0_main and type
+        dotnet add reference ../[projectname]/[projectname].csproj
+        */
         static void test(string [] args)
         {
               Intro i = new Intro(args);
