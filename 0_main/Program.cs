@@ -47,21 +47,13 @@ namespace _0_main
                 List.next = new Node<int>(2,List.root);
                 List++;
                 List.next = new Node<int>(3,List.root);
-                 List++;
+                List++;
                 List.next = new Node<int>(7,List.root);
                 List++;
-                /*
-                List.next = new Node<int>(4,List.root);
-                List = List.next;
-                List.next = new Node<int>(3,List.root);
-                List = List.next;
-                List.next = new Node<int>(1,List.root);
-                List = List.next;
-                */
                 List = List.root;
                 List.Print();
                 //List.next.Print();
-                Swapper<int>.Swap(List, List.next);
+                Swapper<int>.Swap(List.next.root, List.next.next.root);
                 Console.WriteLine("THis is swaped virsooooon");
                 List.Print();
                //   Console.WriteLine("...");

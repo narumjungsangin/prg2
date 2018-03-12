@@ -10,16 +10,16 @@ namespace prg2._2_oop
         public static (Node<T> data, Node<T> root ) Swap (Node<T> A, Node<T> B)
         {
 
-            A.root = root;
-            B.root = root;
-            Node<T> temp =  A;
-            A = B;
-            B = temp;
-           // Node<int> order = new Node<int>(66);
+            //A.root = root;
+            //B.root = root;
+            Node<T> temp =  A.root;
+            A.root = B.root;
+            B.root = temp;
+
+           //Node<int> order = new Node<int>(66);
             return(A , B);
             
         }
-
-       
+  
     }
 }
