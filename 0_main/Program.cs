@@ -52,12 +52,12 @@ namespace _0_main
                 List++;
                 List = List.root;
                 List.Print();
-                //List.next.Print();
-                Swapper<int>.Swap(List.next.root, List.next.next.root);
+                List.next.Print();
+                Swapper<int>.Swap(List.next, List.next.next);
                 Console.WriteLine("THis is swaped virsooooon");
                 List.Print();
-               //   Console.WriteLine("...");
-                //List.next.Print();
+               //Console.WriteLine("...");
+               List.next.Print();
 
 
             /*
