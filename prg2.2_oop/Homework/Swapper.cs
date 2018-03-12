@@ -8,10 +8,7 @@ namespace prg2._2_oop
             Node<T> temp =  A;
             A = B;
             B = temp;
+            
         }
-
-
-
     }
-
 }

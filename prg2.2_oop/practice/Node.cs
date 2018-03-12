@@ -8,11 +8,6 @@ namespace prg2._2_oop
         public T data;
         public Node<T> next;
         public Node<T> root;
-        internal int value;
-
-
-        public int Value { get; internal set; }
-
         public Node(T data, Node<T> root)
         {
             this.data = data;
@@ -54,7 +49,7 @@ namespace prg2._2_oop
 
         //#region operator
 
-       public static bool operator ==(Node<T> obj1, Node<T> obj2)
+      /* public static bool operator ==(Node<T> obj1, Node<T> obj2)
         {
             bool dataEqual = obj1.data.Equals(obj2.data);
             if(null != obj1.next && null !=obj2.next)
@@ -70,7 +65,9 @@ namespace prg2._2_oop
         public static bool operator !=(Node<T> obj1, Node<T> obj2)
         {
             return !(obj1 == obj2);
-        }
+        }*/
+
+        
 
         public static Node<T> operator ++(Node<T> n)
         {

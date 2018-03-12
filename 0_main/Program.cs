@@ -40,19 +40,33 @@ namespace _0_main
             }
             */
 
+
+                
                 Node<int> List = new Node<int>(0);
-                //List = List.next; 
                 List.next = new Node<int>(4,List.root);
                 List++;
                 List.next = new Node<int>(1,List.root);
-                 List++;
+                List++;
                 List.next = new Node<int>(2,List.root);
-                 List++;
+                List++;
                 List.next = new Node<int>(3,List.root);
                  List++;
                 List.next = new Node<int>(7,List.root);
+                List++;
+                /*
+                List.next = new Node<int>(4,List.root);
+                List = List.next;
+                List.next = new Node<int>(3,List.root);
+                List = List.next;
+                List.next = new Node<int>(1,List.root);
+                List = List.next;
+                */
                 List = List.root;
-                Swapper<int>.Swap(List.next.next, List.next.next.next);
+                //List.Print();
+                List.next.Print();
+                Swapper<int>.Swap(List, List.next);
+                List.Print("THis is swaped virsooooon");
+                List.next.Print();
 
             /*
                 Node<double> n0 = new Node<double>(0.0);
