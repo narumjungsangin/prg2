@@ -39,7 +39,7 @@ namespace _0_main
                 done = Console.ReadLine().ToLower();
             }
             */   
-                Node<int> List = new Node<int>(0);
+                Node<int> List = new Node<int>(8);
                 List.next = new Node<int>(4,List.root);
                 List++;
                 List.next = new Node<int>(1,List.root);
@@ -59,8 +59,8 @@ namespace _0_main
                 List = List.next;
                 */
                 List = List.root;
-                //List.Print();
-                List.next.Print();
+                List.Print();
+                //List.next.Print();
                 Swapper<int>.Swap(List, List.next);
                 Console.WriteLine("THis is swaped virsooooon");
                 List.Print();
