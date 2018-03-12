@@ -23,6 +23,9 @@ namespace prg2._2_oop
             Node<T> copy = this;
             this.Display(copy);
         }
+
+
+
         public void PrintAll()
         {
             Node<T> copy = this.root;
@@ -72,6 +75,7 @@ namespace prg2._2_oop
         public static Node<T> operator ++(Node<T> n)
         {
             return n.next;
+            
         }
         
 

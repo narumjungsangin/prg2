@@ -38,10 +38,7 @@ namespace _0_main
                 Console.WriteLine("Are you done adding y/n?");
                 done = Console.ReadLine().ToLower();
             }
-            */
-
-
-                
+            */   
                 Node<int> List = new Node<int>(0);
                 List.next = new Node<int>(4,List.root);
                 List++;
@@ -65,8 +62,11 @@ namespace _0_main
                 //List.Print();
                 List.next.Print();
                 Swapper<int>.Swap(List, List.next);
-                List.Print("THis is swaped virsooooon");
-                List.next.Print();
+                Console.WriteLine("THis is swaped virsooooon");
+                List.Print();
+               //   Console.WriteLine("...");
+                //List.next.Print();
+
 
             /*
                 Node<double> n0 = new Node<double>(0.0);
