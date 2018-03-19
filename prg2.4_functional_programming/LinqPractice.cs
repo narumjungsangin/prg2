@@ -41,7 +41,7 @@ namespace prg2._4_functional_programming
                string ear = DateTime.Now.ToString("yyyy");
                int numear = Convert.ToInt32(ear);
                int[] ceararr = new int[Cyear.Count];
-                 for(int i = 0; i < Cyear.Count; i++)
+               for(int i = 0; i < Cyear.Count; i++)
                 {
                     ceararr[i] = Cyear[i];
                 }

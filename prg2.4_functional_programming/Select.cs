@@ -33,6 +33,14 @@ namespace prg2._4_functional_programming
                 DoSomething(Something);
                 DoSomething(MakeUpperCase);
         }
+        public int NoLoop( List<int> A)
+        {
+           
+            A= A.Where(num => num > 0).ToList();
+            return A.Sum()/A.Count();
+
+        }
+
         public string Something(string msg)
                 {
                     return "help me obi won kanobi" + msg;
