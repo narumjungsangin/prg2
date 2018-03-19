@@ -7,25 +7,22 @@ namespace prg2._4_functional_programming
 {
     public class LinqPractice
     {
-         public void Problem1()
+        public void Problem1()
         {
-           // List<string> TheWord = new List<string>();
-            String TheStatement = "I am Korean but I am not sure";
-           // TheWord = TheStatement.Split(new char[]{' '}).ToList();
-            char[] WordMatter = TheStatement.ToCharArray();
-                foreach(char word in WordMatter)
-                {
-                    if(word < 90 && word > 65)
-                    {
-                        Console.WriteLine(word);
-                    }
-                }
+            String TheStatement = "I am Korean BUT I AM not sUre";
+            List<String> TheWord = new List<String>();
+            List<String> BigWord = new List<String>();
+            //TheWord.AddRange(TheStatement);
+            TheWord  = TheStatement.Split(' ').ToList();
+            BigWord  = TheStatement.ToUpper().Split(' ').ToList();
+           List<string> matching = TheWord.Intersect(BigWord).ToList();
+           Console.WriteLine(" ",matching.ToArray());
             }
 
-        public void ReadCSV()
+      /*  public void ReadCSV()
         {   
             {
-                using(var reader = new StreamReader(@"C:\test.csv"))
+                using(var reader = new StreamReader("C:\Users\user\Desktop/csv"))
                 {
                     List<string> Student = new List<string>();
                     List<int> Cyear = new List<int>();
@@ -46,16 +43,14 @@ namespace prg2._4_functional_programming
                     ceararr[i] = Cyear[i];
                 }
                 //class year arr 로 변환까지 함....
-               
-                
-                
                 }
             }
         }
+        */
 
         public void Problem2()
         {
-            ReadCSV();
+            //ReadCSV();
 
 
         }
