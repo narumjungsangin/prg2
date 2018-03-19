@@ -13,19 +13,25 @@ namespace _0_main
         static void Main(string[] args)
         {
            Console.WriteLine("Launching main");
-        /*Clock clk = new Clock(4,23,14);
-        for(int i = 0; i < 5; i++)
-         {
-           clk.tick();
-         }
-         int x =  QuickMaths.add(5,6); */
-
-        NodeTest();
-         //Console.ReadKey();
+          //  HighOrderTest();
+            TheHardHomeWorrk();
         }
-         static void NodeTest()
+
+        private static void HighOrderTest()
+        {
+            Select s = new Select();
+            s.run();
+        }
+
+        private static void TheHardHomeWorrk()
+        {
+            LinqPractice L = new LinqPractice();
+            L.Problem1();
+        }
+
+       static void NodeTest()
          {
-      /*      Console.WriteLine("I'm testing node");
+            Console.WriteLine("I'm testing node");
             string done = "";
             Node<int> linkedList = new Node<int>(0);
             Node<int> root = linkedList;
@@ -38,7 +44,7 @@ namespace _0_main
                 Console.WriteLine("Are you done adding y/n?");
                 done = Console.ReadLine().ToLower();
             }
-            */   
+             
                 Node<int> List = new Node<int>(8);
                 List.next = new Node<int>(4,List.root);
                 List++;
@@ -58,32 +64,25 @@ namespace _0_main
                 List.Print();
                //Console.WriteLine("...");
                List.next.Print();
-
-
             /*
                 Node<double> n0 = new Node<double>(0.0);
                 n0.next = new Node<double>(1.0);
-
                 Node<double> www = n0[0];
-                n0[0].Print();
-
-                */
-
-               /* if(n0 == n1)
+                n0[0].Print(); 
+                if(n0 == n1)
                 {
                     Console.WriteLine("they are equal");
-
                 }
                 else
                 {
                     Console.WriteLine("they are NOT equal");
-
                 }
                 */
    //       linkedList.Print();
    //       linkedList.PrintAll();
           
          }
+         
 
       
 
