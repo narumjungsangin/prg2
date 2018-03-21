@@ -26,7 +26,8 @@ namespace _0_main
         private static void TheHardHomeWorrk()
         {
             LinqPractice L = new LinqPractice();
-            L.Problem1();
+            //L.Problem1();
+            L.ReadCSV();
         }
 
        static void NodeTest()

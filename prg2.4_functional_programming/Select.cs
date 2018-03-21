@@ -18,7 +18,7 @@ namespace prg2._4_functional_programming
                 Console.Write(word + " ");
             }
             List<string> changedWords = words.Select(word => word.ToLower() == "programming2" ? "Programmin2 is awsome" : word).ToList();
-            List<string> approvedWords = changedWords.Where( word => !word.Contains("cheeto")).ToList();
+            List<string> approvedWords = changedWords.Where(word => !word.Contains("cheeto")).ToList();
             List<string> upperWords = words.Select(MakeUpperCase).ToList();
             List<int> nums = new List<int>(3);
             List<int> nums2 = nums.Select(make10).ToList();

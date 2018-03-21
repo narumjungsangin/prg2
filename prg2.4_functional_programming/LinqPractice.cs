@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
+using System.Text;
+
 
 namespace prg2._4_functional_programming
 {
@@ -9,7 +11,8 @@ namespace prg2._4_functional_programming
     {
         public void Problem1()
         {
-            String TheStatement = "I am Korean BUT I AM not sUre";
+            Console.WriteLine("Write the word");
+            String TheStatement = Console.ReadLine();
             List<String> TheWord = new List<String>();
             List<String> BigWord = new List<String>();
             //TheWord.AddRange(TheStatement);
@@ -19,46 +22,42 @@ namespace prg2._4_functional_programming
            Console.WriteLine(" ",matching.ToArray());
             }
 
-      /*  public void ReadCSV()
+        public void ReadCSV()
         {   
-            {
-                using(var reader = new StreamReader("C:\Users\user\Desktop/csv"))
-                {
-                    List<string> Student = new List<string>();
-                    List<int> Cyear = new List<int>();
-                    List<int> GPA = new List<int>();
-                    while (!reader.EndOfStream)
-                    {
-                        var line = reader.ReadLine();
-                        var values = line.Split(',');
-                        Student.Add(values[0]);
-                        Cyear.Add(Convert.ToInt32(values[1]));
-                        GPA.Add(Convert.ToInt32(values[2]));
-                    }
-               string ear = DateTime.Now.ToString("yyyy");
-               int numear = Convert.ToInt32(ear);
-               int[] ceararr = new int[Cyear.Count];
-               for(int i = 0; i < Cyear.Count; i++)
-                {
-                    ceararr[i] = Cyear[i];
-                }
-                //class year arr 로 변환까지 함....
-                }
-            }
+              
+             string csvlines= "forcsv.csv";
+             List<String> Person = new List<String>();
+                 Person = csvlines.Where(Pseron).ToList();
+                var Gear = csvlines.Select(x => x.Split(",")[1]).ToList();
+                var GPA = csvlines.Select(x => x.Split(",")[2]).ToArray();
+
+                        for(int i = 0; i < Gear.Length; i++)
+                        {
+                            Console.WriteLine(Gear[i]);
+                        }
+
+            
+ 
+
+
         }
-        */
+    
 
         public void Problem2()
         {
-            //ReadCSV();
-
+            ReadCSV();
+            string ear = DateTime.Now.ToString("yyyy");
+            int numear = Convert.ToInt32(ear);
 
         }
-        public void Problem3()
-        {
+     /*   public int Problem3()
+        {   
+            string<int> returnanse = new List<String>;
+
+            return null;
 
         }      
-        
+        */
         }
     
 }
