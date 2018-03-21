@@ -27,16 +27,10 @@ namespace prg2._4_functional_programming
               
              string csvlines= "forcsv.csv";
              List<String> Person = new List<String>();
-                 Person = csvlines.Where(Pseron).ToList();
+                var Gear = csvlines.Select(x => x.Split(",")[0]).ToList();
                 var Gear = csvlines.Select(x => x.Split(",")[1]).ToList();
                 var GPA = csvlines.Select(x => x.Split(",")[2]).ToArray();
 
-                        for(int i = 0; i < Gear.Length; i++)
-                        {
-                            Console.WriteLine(Gear[i]);
-                        }
-
-            
  
 
 
